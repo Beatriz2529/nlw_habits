@@ -35,6 +35,11 @@ input {
   border: 2px solid #27272a;
   border-radius: 8px;
   -webkit-appearance: none;
+  background: #18181b;
+}
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
 }
 
 /* A grid é para componentes de fora
