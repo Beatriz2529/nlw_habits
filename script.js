@@ -20,16 +20,10 @@ function add() {
   nlwSetup.addDay(today)
 }
 
-function save(){
-  
+function save() {
+  localStorage.setItem("NWLSetup@habits", JSON.stringify(nlwSetup.data))
 }
 
-
-// const data = {
-//   run: ["01-20", "01-21", "01-22"],
-//   study: ["01-22", "01-24"],
-//   book: ["01-25"],
-// }
-
-// nlwSetup.setData(data)
-// nlwSetup.load()
+const data = JSON.parse(localStorage.getItem("NWLSetup@habits")) || {}
+nlwSetup.setData(data)
+nlwSetup.load()
