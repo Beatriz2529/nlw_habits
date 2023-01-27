@@ -2,7 +2,7 @@ const form = document.querySelector("#form-habits")
 // aqui ele esta criando um novo objetos 'NLWSetup' e colocando
 //dentro da const 'nlwSetup'
 const nlwSetup = new NLWSetup(form)
-const button = document.querySelector("header button")
+const button = document.querySelector(".recordDay")
 
 button.addEventListener("click", add)
 form.addEventListener("change", save)

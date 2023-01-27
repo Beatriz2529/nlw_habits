@@ -69,6 +69,11 @@ button {
   line-height: 125%;
   color: #a1a1aa;
 }
+.buttonsAdd {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
 input {
   appearance: none;
   width: 64px;
@@ -87,6 +92,5 @@ input:checked {
     display: none;
   }
 }
-
 /* A grid é para componentes de fora
 o flex é para alinhar os item que estao dentro da mesma caixa */
