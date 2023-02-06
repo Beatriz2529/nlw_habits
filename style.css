@@ -74,6 +74,10 @@ button {
   flex-direction: row;
   gap: 15px;
 }
+.modal-content {
+  background-color: #09090a;
+  border-color: #8b5cf6;
+}
 input {
   appearance: none;
   width: 64px;

@@ -31,11 +31,15 @@
     <header>
       <img src="./assets/log.svg" alt="Logomarca do aplicarivo Habits" />
       <div class="buttonsAdd">
-        <button>
+        <button
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          type="button"
+        >
           <img
             src="./assets/plus.svg"
             alt="ícone sinal de mais roxo "
-          />Adicionar Hábitos
+          />Adicionar Hábito
         </button>
         <button class="recordDay">
           <img src="./assets/plus.svg" alt="ícone sinal de mais roxo " />
@@ -50,49 +54,70 @@
         <div class="habit" data-name="food">🍉</div>
         <div class="habit" data-name="book">📖</div>
         <div class="habit" data-name="study">🔬</div>
-        <!-- Button trigger modal -->
-        <!-- <button type="button" class="btn btn-primary">Launch demo modal</button> -->
-
-        <!-- Modal -->
-        <!-- <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  Modal title
-                </h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">...</div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
+      </div>
+      <div class="days"></div>
+    </form>
+    <form id="form-modal">
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <!---Form add Habits-->
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Adicionar Emogi:</label
                 >
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
-                </button>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="Se você estiver no computador é só dar um 'Windows' + '.'"
+                />
+              </div>
+              <!-- <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Example textarea</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
               </div> -->
+
+              <!---->
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Fechar
+              </button>
+              <button type="button" class="btn btn-primary">Salvar</button>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="days"></div>
     </form>
     <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
     <script src="./script.js"></script>
