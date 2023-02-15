@@ -57,7 +57,7 @@
       </div>
       <div class="days"></div>
     </form>
-    <form id="form-modal">
+    
       <!-- Modal -->
       <div
         class="modal fade"
@@ -67,6 +67,7 @@
         aria-hidden="true"
       >
         <div class="modal-dialog">
+          <form id="form-modal">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
@@ -83,34 +84,34 @@
               <!---Form add Habits-->
               <div class="mb-3">
                 <div class="DivEmogi">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Adicionar Emogi:</label
-                >
-                <input
-                  type="text"
-                  class="InputEmogi"
-                  id="exampleFormControlInput1"
-                  placeholder="Se você estiver no computador é só dar um 'Windows' + '.'"
-                />
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Adicionar Emogi:</label
+                  >
+                  <input
+                    type="text"
+                    class="InputEmogi"
+                    id="exampleFormControlInput1"
+                    placeholder="  Se você estiver no computador é só dar um 'Windows' + '.'"
+                  />
+                </div>
+                <div class="Divtooltips">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Adicionar Descrição:</label
+                  >
+                  <input
+                    type="text"
+                    class="InputEmogi"
+                    id="exampleFormControlInput1"
+                    placeholder=" Digite uma descrição..."
+                  />
                 </div>
               </div>
-              <!-- <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"
-                  >Example textarea</label
-                >
-                <textarea
-                  class="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                ></textarea>
-              </div> -->
-
-              <!---->
+              </form>
             </div>
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="close"
                 data-bs-dismiss="modal"
               >
                 Fechar
@@ -120,7 +121,7 @@
           </div>
         </div>
       </div>
-    </form>
+    
     <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
     <script src="./script.js"></script>
     <script
