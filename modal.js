@@ -1,28 +1,27 @@
 const formModal = document.getElementById("form-modal")
 const divHabits = document.getElementById("form-habits")
+const Habit = JSON.parse(localStorage.getItem("newHabit")) || []
 
-console.log(divHabits)
+Habit.forEach((elemento) => {
+  criaElemento(elemento)
+})
 
-//const nlwSetupAddHabits = new NLWSetup(formModal)
-const addHabits = JSON.parse(localStorage.getItem("NWLSetup@addhabits")) || []
 formModal.addEventListener("submit", (evento) => {
   evento.preventDefault()
 
-  const emogi = evento.target.elements["exampleFormControlInput1"]
-  const descricao = evento.target.elements["exampleFormControlInput2"]
+  const emogi = evento.target.elements["emogi"]
+  const descricao = evento.target.elements["descricao"]
 
   const newHabit = {
     emogi: emogi.value,
-    descricao: descricao.value,
+    decricao: descricao.value,
   }
-  console.log(newHabit)
-
-  emogi.value = ""
-  descricao.value = ""
+  newHabit.id = Habit[Habit.length - 1] ? Habit[Habit.length - 1].id + 1 : 0
 
   criaElemento(newHabit)
-  // addHabits.push(newHabit)
-  // localStorage.setItem("itens", JSON.stringify(newHabit))
+  Habit.push(newHabit)
+
+  localStorage.setItem("Habit", JSON.stringify(Habit))
 })
 
 function criaElemento(item) {
@@ -31,5 +30,6 @@ function criaElemento(item) {
   `
   // console.log(item.emogi)
 }
-formModal.setData(addHabits)
-formModal.load()
+
+// formModal.setData(Habits)
+// formModal.load()
